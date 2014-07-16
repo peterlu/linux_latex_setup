@@ -36,16 +36,23 @@ Modern distribution, flexible. Must download the latest from texlive.org (Ubuntu
 sudo ./install_tl
 ```
 
-This launches the text-based installer. A good minimum installation (about 700 MB) has the following settings:
+This launches the text-based installer. A good minimum installation (about 700 MB) uses the **scheme-basic** scheme, letter size instead of A4, and adds the following packages:
 
-+ `scheme-basic`
-added: recommended fonts, Chinese, Chinese/Japanese/Korean (base), Latex recommended packages
-use letter size instead of A4 by default
++ recommended fonts, 
++ Chinese, 
++ Chinese/Japanese/Korean (base), 
++ Latex recommended packages
+
+After installation completes, add the RevTeX-4.1 packages for Physical Review
+
 ```
 /usr/local/texlive/2014/bin/x86_64-linux $ sudo ./tlmgr install revtex
 ```
-# 5. SSH key generation
+# 5. Generate SSH keys to interact with repository
+
+```
 ssh-keygen -t rsa -C "plu@fas.harvard.edu"
+```
 
 # 6. Eclipse Luna C++ IDE
 unzip, move to /opt, change permission
@@ -66,11 +73,16 @@ SSH keys option on left
 add text from id_rsa.pub
 
 # 10. in ~/workspace/
+```
 git init
 git clone git@bitbucket.org:peterjlu/aot_xl.git
+````
 
 # 11. In eclipse: file->import->general->existing projects into workspace
 
-# 12. git add -A
+# 12. Updating a git repository
+```
+git add -A
 git commit -m 'name of update'
 git push
+```
