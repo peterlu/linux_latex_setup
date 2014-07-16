@@ -14,13 +14,13 @@ Based on Ubuntu 14.04 LTS, but with fewer kernel updates; XFCE desktop is fast, 
 
 # Synaptic package manager
 
-In _Synaptic Package Manager_, install packages:
+In *Synaptic Package Manager*, install packages:
 
 + git
 + pcmanfm
 + alacarte
 
-_Optical packages_ 
+_Optional packages_ 
 
 + nfs-common
 + laptop-mode-tools
