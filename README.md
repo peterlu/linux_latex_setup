@@ -39,10 +39,12 @@ sudo ./install_tl
 
 This launches the text-based installer. A good minimum installation (about 700 MB) uses the **scheme-basic** scheme, letter size instead of A4, and adds the following packages:
 
-+ recommended fonts, 
-+ Chinese, 
-+ Chinese/Japanese/Korean (base), 
++ recommended fonts
 + Latex recommended packages
+
+_For Asian names_:
++ Chinese 
++ Chinese/Japanese/Korean (base)
 
 After installation completes, add the RevTeX-4.1 packages for _Physical Review_ journals.
 
