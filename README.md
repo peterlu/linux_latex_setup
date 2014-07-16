@@ -14,7 +14,7 @@ Based on Ubuntu 14.04 LTS, but with fewer kernel updates; XFCE desktop is fast, 
 
 # Synaptic package manager
 
-In **Synaptic Package Manager** ('apt-get'), install packages:
+In **Synaptic Package Manager** (`apt-get`), install packages:
 
 + git
 + pcmanfm
@@ -30,11 +30,15 @@ _Optional packages_
 
 ### TexLive 2014
 
-Modern distribution, flexible. Must download the latest from texlive.org (Ubuntu packages are way out of date).
+Modern distribution, flexible. Must download the latest from texlive.org (Ubuntu packages are way out of date). Extract archive, then run
 
-*
+```
+sudo ./install_tl
+```
 
-scheme-basic
+This launches the text-based installer. A good minimum installation (about 700 MB) has the following settings:
+
++ `scheme-basic`
 added: recommended fonts, Chinese, Chinese/Japanese/Korean (base), Latex recommended packages
 use letter size instead of A4 by default
 ```
