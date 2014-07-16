@@ -5,23 +5,22 @@ Setup instructions for starting with a bare-metal machine and setting up Linux, 
 
 # Install Linux
 
-## Linux Mint 17 Qiana, XFCE edition
+### Linux Mint 17 Qiana, XFCE edition
 
 Based on Ubuntu 14.04 LTS, but with fewer kernel updates; XFCE desktop is fast, easy to use, widespread. 
 
-
-
-# Run updates and restart.
+1. Download .iso or .usb, and make bootable DVD / USB stick
+2. Run updates and restart.
 
 # Synaptic package manager
 
-Install the following packages
+In _Synaptic Package Manager_, install packages:
 
 + git
 + pcmanfm
 + alacarte
 
------------------------
+_Optical packages_ 
 
 + nfs-common
 + laptop-mode-tools
