@@ -27,7 +27,7 @@ _Optional packages_
 + laptop-mode-tools
 + powerstat
 
-# 4. Install LaTeX distribution
+# Install LaTeX distribution
 
 ### TexLive 2014
 
@@ -87,13 +87,13 @@ git config --global user.email plu@fas.harvard.edu
 
 # Clone repository and import into Eclipse
 
-1. In the workspace directory (typically `~/workspace`):
+In the workspace directory (typically `~/workspace`):
 
 ```
 git clone git@bitbucket.org:peterjlu/aot_xl.git
 ````
 
-2. In Eclipse: file->import->general->existing projects into workspace
+In Eclipse: file->import->general->existing projects into workspace
 
 # Updating a git repository
 ```
