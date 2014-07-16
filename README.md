@@ -7,14 +7,25 @@ Setup instructions for starting with a bare-metal machine and setting up Linux, 
 
 # 2. Run updates and restart.
 
-# 3. Install from synaptic package manager: git, pcmanfm, alacarte, nfs-common, laptop-mode-tools, powerstat
+# 3. Synaptic package manager
+
+Install the following packages
+
++ git
++ pcmanfm
++ alacarte
+-----------------------
++ nfs-common
++ laptop-mode-tools
++ powerstat
 
 # 4. download and install TexLive:
 scheme-basic
 added: recommended fonts, Chinese, Chinese/Japanese/Korean (base), Latex recommended packages
 use letter size instead of A4 by default
+```
 /usr/local/texlive/2014/bin/x86_64-linux $ sudo ./tlmgr install revtex
-
+```
 # 5. SSH key generation
 ssh-keygen -t rsa -C "plu@fas.harvard.edu"
 
@@ -25,9 +36,11 @@ unzip, move to /opt, change permission
 Window->Preferences->Texlipse->Builder Settings
 path: /usr/local/texlive/2014/bin/x86_64-linux
 
-# 8. git setup
+# 8. Configure git for first usage
+```
 git config --global user.name "Peter J. Lu"
 git config --global user.email plu@fas.harvard.edu
+```
 
 # 9. Install lastpass for Chrome, login to bitbucket.org
 Upper right corner, drop down "manage account"
