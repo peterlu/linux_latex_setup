@@ -43,44 +43,60 @@ This launches the text-based installer. A good minimum installation (about 700 M
 + Chinese/Japanese/Korean (base), 
 + Latex recommended packages
 
-After installation completes, add the RevTeX-4.1 packages for Physical Review
+After installation completes, add the RevTeX-4.1 packages for _Physical Review_ journals.
 
 ```
 /usr/local/texlive/2014/bin/x86_64-linux $ sudo ./tlmgr install revtex
 ```
-# 5. Generate SSH keys to interact with repository
+# SSH keys 
+Generate SSH keys to be able to `push` to remote git repository.
 
 ```
 ssh-keygen -t rsa -C "plu@fas.harvard.edu"
 ```
 
-# 6. Eclipse Luna C++ IDE
-unzip, move to /opt, change permission
+# Eclipse IDE
 
-# 7. Texlipse: help->install new software, with path http://texlipse.sourceforge.net
-Window->Preferences->Texlipse->Builder Settings
-path: /usr/local/texlive/2014/bin/x86_64-linux
+Large software integrated development environment (IDE), open-sourced by IBM.
 
-# 8. Configure git for first usage
+Download from eclipse.org and extract archive, which places all files in single folder.
+
+```
+sudo mv eclipse /opt/
+sudo chmod 777 /opt/eclipse
+```
+
+# Texlipse
+
+LaTeX integration for Eclipse, runs all tools, etc. In Eclipse:
+
+1. help->install new software, with path http://texlipse.sourceforge.net
+
+2. Window->Preferences->Texlipse->Builder Settings, set path: /usr/local/texlive/2014/bin/x86_64-linux
+
+# Configure git for first usage
+
 ```
 git config --global user.name "Peter J. Lu"
 git config --global user.email plu@fas.harvard.edu
 ```
 
-# 9. Install lastpass for Chrome, login to bitbucket.org
-Upper right corner, drop down "manage account"
-SSH keys option on left
-add text from id_rsa.pub
+# Add SSH key to bitbucket.org repository 
 
-# 10. in ~/workspace/
+1. login to bitbucket.org
+2. In upper right corner, drop down "manage account", SSH keys option on left: add text from id_rsa.pub
+
+# Clone repository and import into Eclipse
+
+1. In the workspace directory (typically `~/workspace`):
+
 ```
-git init
 git clone git@bitbucket.org:peterjlu/aot_xl.git
 ````
 
-# 11. In eclipse: file->import->general->existing projects into workspace
+2. In eclipse: file->import->general->existing projects into workspace
 
-# 12. Updating a git repository
+# Updating a git repository
 ```
 git add -A
 git commit -m 'name of update'
