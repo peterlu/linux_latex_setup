@@ -14,7 +14,7 @@ Based on Ubuntu 14.04 LTS, but with fewer kernel updates; XFCE desktop is fast, 
 
 # Synaptic package manager
 
-In *Synaptic Package Manager*, install packages:
+In **Synaptic Package Manager** ('apt-get'), install packages:
 
 + git
 + pcmanfm
@@ -26,7 +26,14 @@ _Optional packages_
 + laptop-mode-tools
 + powerstat
 
-# 4. download and install TexLive:
+# 4. Install LaTeX distribution
+
+### TexLive 2014
+
+Modern distribution, flexible. Must download the latest from texlive.org (Ubuntu packages are way out of date).
+
+*
+
 scheme-basic
 added: recommended fonts, Chinese, Chinese/Japanese/Korean (base), Latex recommended packages
 use letter size instead of A4 by default
