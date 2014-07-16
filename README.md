@@ -9,7 +9,8 @@ Setup instructions for starting with a bare-metal machine and setting up Linux, 
 
 Based on Ubuntu 14.04 LTS, but with fewer kernel updates; XFCE desktop is fast, easy to use, widespread. 
 
-1. Download .iso or .usb, and make bootable DVD / USB stick
+1. Download .iso or .usb from http://www.linuxmint.com/download.php, and make bootable DVD / USB stick
+
 2. Run updates and restart.
 
 # Synaptic package manager
@@ -30,7 +31,7 @@ _Optional packages_
 
 ### TexLive 2014
 
-Modern distribution, flexible. Must download the latest from texlive.org (Ubuntu packages are way out of date). Extract archive, then run
+Modern distribution, flexible. Must download the latest from http://tug.org/texlive/ (Ubuntu packages are way out of date). Extract archive, then run
 
 ```
 sudo ./install_tl
@@ -57,9 +58,7 @@ ssh-keygen -t rsa -C "plu@fas.harvard.edu"
 
 # Eclipse IDE
 
-Large software integrated development environment (IDE), open-sourced by IBM.
-
-Download from eclipse.org and extract archive, which places all files in single folder.
+Large software integrated development environment (IDE), open-sourced by IBM. Current version is Eclipse 4.4 "Luna". Download from http://eclipse.org/downloads/ and extract archive, which places all files in single folder.
 
 ```
 sudo mv eclipse /opt/
@@ -83,7 +82,7 @@ git config --global user.email plu@fas.harvard.edu
 
 # Add SSH key to bitbucket.org repository 
 
-1. login to bitbucket.org
+1. login to https://www.bitbucket.org
 2. In upper right corner, drop down "manage account", SSH keys option on left: add text from id_rsa.pub
 
 # Clone repository and import into Eclipse
@@ -94,7 +93,7 @@ git config --global user.email plu@fas.harvard.edu
 git clone git@bitbucket.org:peterjlu/aot_xl.git
 ````
 
-2. In eclipse: file->import->general->existing projects into workspace
+2. In Eclipse: file->import->general->existing projects into workspace
 
 # Updating a git repository
 ```
