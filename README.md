@@ -3,7 +3,7 @@ Setting up Linux, LaTeX, git and Eclipse
 
 Setup instructions for starting with a bare-metal machine and setting up Linux, LaTeX, Eclipse and git
 
-# Install Linux
+# Linux: install and configure
 
 ### Linux Mint 17 Qiana, XFCE edition
 
@@ -13,7 +13,7 @@ Based on Ubuntu 14.04 LTS, but with fewer kernel updates; XFCE desktop is fast, 
 
 2. Run updates and restart.
 
-# Synaptic package manager
+## Synaptic package manager
 
 In **Synaptic Package Manager** (`apt-get`), install packages:
 
