@@ -1,4 +1,4 @@
-Setting up Linux, LaTeX, git and Eclipse
+Setting up Linux, LaTeX, Eclipse, git and JabRef
 =================
 
 Setup instructions for starting with a bare-metal machine and setting up Linux, LaTeX, Eclipse, git and JabRef. These tools are all free, open-source and are designed for multi-user asynchronous authoring and collaborative editing of documents with references, and far exceed the capabilities of the typical Windows-style tools of previous decades (Windows, EndNote, MathType) which as far as I am concerned should be avoided.
