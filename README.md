@@ -101,6 +101,8 @@ In order to manage identities and security, git (like many modern Linux tools) r
 ssh-keygen -t rsa -C "plu@fas.harvard.edu"
 ```
 
+You will be prompted for a passphrase, the password that you will use to unlock this key every time you want to use it.
+
 ### Add SSH key to bitbucket.org repository 
 
 1. login to https://www.bitbucket.org
@@ -125,7 +127,50 @@ git add -A
 git commit -m 'name of update'
 git push
 ```
+
+You will be prompted for the passphrase; once you enter it successfully, it automatically uploads and updates the remote repository. To confirm this, you can check online at http://www.bitbucket.org.
+
 ### Updating a git repository: inside Eclipse
 
-Right click on the project name in the _Project Explorer_, Team->commit. Enter the text
+Right click on the project name in the _Project Explorer_, Team->commit. Enter the text that describes the update (the equivalent of the text entered with the command-line `git commit`), then press the "Commit and Push" button to do the commit and upload in one step.
 
+# JabRef
+
+LaTeX has a simple, elegant way to store reference data, using text files to store data, which are then processed by a program called BibTeX. BibTeX is installed as part of any normal LaTeX distribution, TeXLive included, and will automatically be called at the appropriate time by Texlipse when building in Eclipse. Hence, there is no special installation procedure.
+
+BibTeX stores references as records in a simple text file, which makes management of the files a bit cumbersome when more than a few references are involved. A number of free tools exist to help with this problem, and one of the more popular ones is JabRef, which works with the native BibTeX text files as the fundamental database format. 
+
+JabRef is a java-based program, so there are several ways to run it, either from the command-line as a local java program, or directly from the browser.
+
+### Install and run JabRef locally
+
+1. Download the latest version from http://jabref.sourceforge.net
+2. From the command-line, run:
+
+```
+java -jar JabRef-2.10.jar
+```
+
+This should run automatically. For information on the version of Java installed, run `java -version`, and if that doesn't work, check the directory `/usr/bin/java` to see if the program is installed. Otherwise, use Synaptic to install it.
+
+### Launch JabRef from the web browser
+
+On the main JabRef page at http://jabref.sourceforge.net, click the button marked "Web Start, run JabRef instantly", which will then start the (second most recent) version. You *must* give the application full access to your machine in order for it to work.
+
+Once launched and a BibTeX file is opened, you get a list of all of the records, which can then be edited by double-clicking. There are several tabs that then open up, so you can either edit the appropriate `Required Fields`, or get the direct text listing in the tab marked `BibTeX source`.
+
+### Importing references via the DOI number, ISBN, keywords etc.
+
+What is truly useful about JabRef is the ability to auto-import complete references from various sources:
+
+1. Click on Search->Web search to bring up a new tab on the left, 
+2. There is a drop-down box marked `ACM Portal`. Clicking on this brings up a list of sources from which to import data. Select 'DOI to BibTeX'.
+3. From a paper, web page, etc. type or paste the DOI number into the white box, and press Fetch. That brings up a new dialog with the paper, which you then click to import. Do the same thing for ISBN number or other search information.
+
+This automatically adds a completed reference to the list, but usually requires some modification:
+
+1. Change the `Bibtexkey` to whatever key system you use for the rest of your references.
+
+2. The page numbers have a funny character (an en dash) instead of a hyphen; replace this with a regular `-` hyphen.
+
+Save the database / BibTeX file. Now when you add that key in a `~\cite{}` command in your LaTeX document, and then save it, Eclipse will build all of the relevant files and generate a document with the updated reference.
